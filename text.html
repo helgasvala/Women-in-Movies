@@ -27,8 +27,10 @@
 <h3>
 <a id="rating-classifier" class="anchor" href="#rating-classifier" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A rating classifier</h3>
 <p> First, we train a classifier to guess the rating of movies on IMDB based on the words used about them in their user reviews and the movie overviews. We binarize the ratings, and split the ratings on 7.5, since movies on IMDB are generally considered very good if they score higher. Thus, a movie with over 7.5 receives 1 in our binarizer, and a movie with below 7.5 receives a 0.
-  We train the classifier on 90% of our data and get a performance of around 80%, and at the highest, 85%. Although this doesn't seem like a very bad performance, if we look at the number of movies we had in each division, 
-  we have 374 movies receiving a high grade and 1823 movies receiving a low grade. If we would guess that every single movie got a lower grade, the classifier would have around 83% performance, 
+  We train the classifier on 90% of our data and get a performance of around 80%, and at the highest, 85%. <br/>
+  Although 80% doesn't seem like a very bad performance, if we look at the number of movies we had in each division, 
+  we have 374 movies receiving a high grade and 1823 movies receiving a low grade. <br/>
+  Thus, if we were to guess that every single movie got the lower grade, the classifier would have around 83% performance, 
   that is, a pessimistic classifier (always rating movies as bad) is most often better performing than ours.</p>
       
 <h3>
