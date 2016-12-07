@@ -38,12 +38,16 @@
       <p> The movie recommendation system seems to work, as it mainly predicts movies in the same class (pretty bad Adam Sandler movies) for a reasonably O.K. Adam Sandler movie. And one about golf if that's the reason for the user liking Happy Gilmore.</p> 
       
 <h3>
-<a id="women-appearance" class="anchor" href="#women-appearance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The appearance of women in films</h3>
-<p> Now, let's look at graphs for each year; how the directors, writers and stars of movies are distributed based on gender. <p>
-      <h4> <a id="directors-appearance" class="anchor" href="#directors-appearance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Directors ratio</h4>
-      <img height="500" width="600" src="SocialGraphsPics/numberdirectors.png" alt="hi" class="inline"/>
-      <p> In the graph above, we look at all movies with a female director vs. all movies with a male director. Some movies could have more than one director, and thus have two entries (male and female) in the graph. We see the same as in our percentage table before, movies from 1996 have the most female directors and 2015, but the distribution is very uneven for every single year.</p>
-      <h4> <a id="writers-appearance" class="anchor" href="#writers-appearance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Writers ratio</h4>
+<a id="gender-descriptive-words" class="anchor" href="#gender-descriptive-words" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gender descriptive words</h3>
+<p> Now, we split the movies on our list up to four groups. The first group consists of movies with a female star, female director, and at least one female writer. The next group consists of all-male movies. The third group has movies that have either a female star or a director and the last group contains the rest of the movies, the blended movies. <br/>
+  <b>3.19%</b> of 2102 movies have a female writer, director and a star while <b>56.90%</b> of the movies have a male writer, director and a star. <br/>
+      In contrast to before, when we used a built-in Vectorizer to perform our tf-idf analysis, we use our own function now to see which words are most descriptive of our four groups, all-female, all-male, female director/actress and blended.</p>
+      <img height="500" width="1200" src="SocialGraphsPics/tfidf-genders.png" alt="hi" class="inline"/>
+      <p> Looking at this list, the results aren't as clear-cut as maybe expected, even though the all-male list contains some words that might be considered masculine, and are definitely more action-filled.
+        The all-female list contains many female names. This list does not show any sentiment.</p>
+<h3>
+  <a id="word-clouds" class="anchor" href="#word-clouds" aria-hidden="true"><span aria-hidden="true" class="octico octicon-link"></span></a>Word clouds for the groups</h3>
+Now let's make wordclouds from the list above:
       <img height="500" width="600" src="SocialGraphsPics/numberwriters.png" alt="hi" class="inline"/>
       <p> Let's consider that the preceding graph shows every movie that has a male writer, as well as every movie that has a female writer. The ratios are different than in our table, showing that there are many movies that contain both female and male writers. </p>  
       <h4> <a id="actors-appearance" class="anchor" href="#actors-appearance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Actors ratio</h4>
