@@ -25,12 +25,18 @@
       <p> In this section, we'll look at text analysis for the project. We do a term frequency - inverse document frequency analysis on all of the movies to create a sort of a movie recommendation system, look at the words generally used for movies based on gender, perform a sentiment analysis and more.</p>
 
 <h3>
-<a id="women-ratio" class="anchor" href="#women-ratio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The ratio of women in movies</h3>
-
-<p> First, we'll look at how many movies of the ones released in every year we look at are written by at least one woman, directed by at least one woman and have a female star. </p>
-      <img height="500" width="1200" src="SocialGraphsPics/percentfemales.png" alt="hi" class="inline"/>
-      <p> We see that the situation is the worst for women in the directing world. It has improved remarkably little over the span of the last 50 years, with a ratio only two times higher in the year 2016 than 1966, but still under 10%.
-      The writers statistics seem good, but we should consider the fact that the requirement that a movie has a female writer is only that one of the writers of the movie is female, and most movies have more than one and more than two writers. </p>
+<a id="rating-classifier" class="anchor" href="#rating-classifier" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A rating classifier</h3>
+<p> First, we train a classifier to guess the rating of movies on IMDB based on the words used about them in their user reviews and the movie overviews. We binarize the ratings, and split the ratings on 7.5, since movies on IMDB are generally considered very good if they score higher. Thus, a movie with over 7.5 receives 1 in our binarizer, and a movie with below 7.5 receives a 0.
+  We train the classifier on 90% of our data and get a performance of around 80%, and at the highest, 85%. Although this doesn't seem like a very bad performance, if we look at the number of movies we had in each division, 
+  we have 374 movies receiving a high grade and 1823 movies receiving a low grade. If we would guess that every single movie got a lower grade, the classifier would have around 83% performance, 
+  that is, a pessimistic classifier (always rating movies as bad) is most often better performing than ours.</p>
+      
+<h3>
+  <a id="recommendation-system" class="anchor" href="#recommendation-system" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A movie recommendation system</h3>
+<p> First, we perform a tf-idf analysis on our text, and use k nearest neighbour search to be able to make sort of a movie recommendation system. We pick a random movie, and pick the four that are most like it in terms of the words used in user reviews and movie overviews. This can hopefully return similar movies as recommendations.</p>
+  <img height="500" width="1200" src="SocialGraphsPics/movierecommendations.png" alt="hi" class="inline"/>
+      <p> The movie recommendation system seems to work, as it mainly predicts movies in the same class (pretty bad Adam Sandler movies) for a reasonably O.K. Adam Sandler movie. And one about golf if that's the reason for the user liking Happy Gilmore.</p> 
+      
 <h3>
 <a id="women-appearance" class="anchor" href="#women-appearance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The appearance of women in films</h3>
 <p> Now, let's look at graphs for each year; how the directors, writers and stars of movies are distributed based on gender. <p>
