@@ -34,7 +34,7 @@
 <h3>
   <a id="recommendation-system" class="anchor" href="#recommendation-system" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A movie recommendation system</h3>
 <p> First, we perform a tf-idf analysis on our text, and use k nearest neighbour search to be able to make sort of a movie recommendation system. We pick a random movie, and pick the four that are most like it in terms of the words used in user reviews and movie overviews. This can hopefully return similar movies as recommendations.</p>
-  <img height="500" width="1200" src="SocialGraphsPics/movierecommendations.png" alt="hi" class="inline"/>
+  <img height="450" width="1000" src="SocialGraphsPics/movierecommendations.png" alt="hi" class="inline"/>
       <p> The movie recommendation system seems to work, as it mainly predicts movies in the same class (pretty bad Adam Sandler movies) for a reasonably O.K. Adam Sandler movie. And one about golf if that's the reason for the user liking Happy Gilmore.</p> 
       
 <h3>
@@ -42,7 +42,7 @@
 <p> Now, we split the movies on our list up to four groups. The first group consists of movies with a female star, female director, and at least one female writer. The next group consists of all-male movies. The third group has movies that have either a female star or a director and the last group contains the rest of the movies, the blended movies. <br/>
   <b>3.19%</b> of 2102 movies have a female writer, director and a star while <b>56.90%</b> of the movies have a male writer, director and a star. <br/>
       In contrast to before, when we used a built-in Vectorizer to perform our tf-idf analysis, we use our own function now to see which words are most descriptive of our four groups, all-female, all-male, female director/actress and blended.</p>
-      <img height="1000" width="1200" src="SocialGraphsPics/tfidf-genders.png" alt="hi" class="inline"/>
+      <img height="800" width="1000" src="SocialGraphsPics/tfidf-genders.png" alt="hi" class="inline"/>
       <p> Looking at this list, the results aren't as clear-cut as maybe expected, even though the all-male list contains some words that might be considered masculine, and are definitely more action-filled.
         The all-female list contains many female names. This list does not show any sentiment.</p>
       
@@ -51,28 +51,28 @@
   <a id="word-clouds" class="anchor" href="#word-clouds" aria-hidden="true"><span aria-hidden="true" class="octico octicon-link"></span></a>Word clouds for the groups</h3>
 Now let's make wordclouds from the list above:
       <h4> <a id="female-cloud" class="anchor" href="#female-cloud" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Word cloud for all-female movies</h4>
-      <img height="500" width="600" src="SocialGraphsPics/wholefemalewordcloud.png" alt="hi" class="inline"/>
+      <img height="400" width="400" src="SocialGraphsPics/wholefemalewordcloud.png" alt="hi" class="inline"/>
       <p> The female word cloud contains mostly proper nouns, names of characters in movies made by women. It's clear from the cloud that Frozen is an all-female movie. </p>  
       <h4> <a id="male-cloud" class="anchor" href="#male-cloud" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Word cloud for all-male movies</h4>
-      <img height="500" width="600" src="SocialGraphsPics/wholemalewordcloud.png" alt="hi" class="inline"/>
+      <img height="400" width="400" src="SocialGraphsPics/wholemalewordcloud.png" alt="hi" class="inline"/>
       <p> The male also contains mostly proper nouns, but words like slave and agent can be seen. </p>
       <h4> <a id="some-cloud" class="anchor" href="#some-cloud" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Word cloud for movies with a female director or star</h4>
-      <img height="500" width="600" src="SocialGraphsPics/somefemalewordcloud.png" alt="hi" class="inline"/>
+      <img height="400" width="400" src="SocialGraphsPics/somefemalewordcloud.png" alt="hi" class="inline"/>
       <h4> <a id="blended-cloud" class="anchor" href="#blended-cloud" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Word cloud for blended movies</h4>
-      <img height="500" width="600" src="SocialGraphsPics/blendedwordcloud.png" alt="hi" class="inline"/>
+      <img height="400" width="400" src="SocialGraphsPics/blendedwordcloud.png" alt="hi" class="inline"/>
 <h3>
 <a id="sentiment-analysis" class="anchor" href="#sentiment-analysis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sentiment analysis</h3>
 <p> The next step is to perform a sentiment analysis, with a list of words with sentiment scores, previously used in this class. We then compare the sentiment score of each group to the average IMDB rating of the movies in the group.
-      <img height="500" width="600" src="SocialGraphsPics/sentiment.png" alt="hi" class="inline"/>
+      <img height="100" width="400" src="SocialGraphsPics/sentiment.png" alt="hi" class="inline"/>
       <p> From this table, we see that movies done by females get the most positive reviews, in regards of sentiment analysis, and also the highest rating on imdb (almost tied with the blended movies). There are though, a lot fewer movies done by women, and less room for mistakes, so it's maybe not surprising that they receive better reviews.</p>
 
       
 <h3>
   <a id="sexist-words" class="anchor" href="#sexist-words" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a> Sexist words used in user reviews </h3>
       <p> Finally, we have made a list of words, often used in a degrading manner to describe women. We want to see how common they are in user reviews, for each of our groups. </p>
-    <img height="500" width="600" src="SocialGraphsPics/sexistwordcloud.png" alt="hi" class="inline"/>
+    <img height="400" width="400" src="SocialGraphsPics/sexistwordcloud.png" alt="hi" class="inline"/>
       <p> Running this list through our different groups to check how often these words are used, as a percentage of all of the words used, we get:</p>
-      <img height="200" width="1200" src="SocialGraphsPics/sexistwords.png" alt="hi" class="inline"/>
+      <img height="100" width="1200" src="SocialGraphsPics/sexistwords.png" alt="hi" class="inline"/>
       <p> The results are very clear here. The sexist words are 10 times more likely to be used in reviews about movies made by women than movies solely made by men. The ratio gets higher with more women involved in the movie.</p>
       
     </section>
