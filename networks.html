@@ -23,56 +23,26 @@
       <h2>
 <a id="tasks" class="anchor" href="#tasks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Network</h2>
       <p> In this section we will extract information from The Open Movie Database to get all the information needed to construct networks
-      from movies released in the last 50 years</p>
+      from movies released in the last 50 years. Each movie has listed 3-5 star actors that we will connect together in 
+  networkx multigraph, we will use multigraph since actors can be connected with each other not only from one movie but from multiple movies.
+      Red nodes will contribute to female actors and blue nodes will contribute to a male actors</p>
 
 <h3>
 <a id="women-ratio" class="anchor" href="#women-ratio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Actors Network</h3>
 
-<p> First, we'll construct a network of actors from movies released in recent 5 years. Each movie has listed 3-5 star actors that we will connect together in 
-  networkx multigraph, we will use multigraph since actors can act with each other not only once but multiple times. This is how the network for Actors in recent 5 years looks like: </p>
-      <img height="500" width="1200" src="SocialGraphsPics/Actors5.png" alt="hi" class="inline"/>
-      <p> Red nodes contributes to a female actor and blue nodes contributes to a male actors. The ration is ..
+<p> First, we'll construct a network of actors from movies released in recent 50 years, this is how the network looks like: </p>
+      <img height="500" width="1200" src="SocialGraphsPics/Actors50.png" alt="hi" class="inline"/>
+      <p> The ration is ..
         with the five highest degree of the following actors:</p>
       
-      <p> Now we will take a look at the Actors network from movies released in recent 50 years. </p>
-      <img height="500" width="1200" src="SocialGraphsPics/Actors50.png" alt="hi" class="inline"/>
+      <p> Now we will take a look at more recent data that may reflect more on the current status in the actor network. 
+        We will do so by constructing the network from movies released in recent 5 years (2012-2016). </p>
+      <img height="500" width="1200" src="SocialGraphsPics/Actors5.png" alt="hi" class="inline"/>
       <p> What is interesting to see is that the network seems to be similar to the one above. </p>
 <h3>
 <a id="women-appearance" class="anchor" href="#women-appearance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Directors Network</h3>
-<p> Now, let's look at graphs for each year; how the directors, writers and stars of movies are distributed based on gender. <p>
-      <h4> <a id="directors-appearance" class="anchor" href="#directors-appearance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Directors ratio</h4>
-      <img height="500" width="600" src="SocialGraphsPics/numberdirectors.png" alt="hi" class="inline"/>
-      <p> In the graph above, we look at all movies with a female director vs. all movies with a male director. Some movies could have more than one director, and thus have two entries (male and female) in the graph. We see the same as in our percentage table before, movies from 1996 have the most female directors and 2015, but the distribution is very uneven for every single year.</p>
-      <h4> <a id="writers-appearance" class="anchor" href="#writers-appearance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Writers ratio</h4>
-      <img height="500" width="600" src="SocialGraphsPics/numberwriters.png" alt="hi" class="inline"/>
-      <p> Let's consider that the preceding graph shows every movie that has a male writer, as well as every movie that has a female writer. The ratios are different than in our table, showing that there are many movies that contain both female and male writers. </p>  
-      <h4> <a id="actors-appearance" class="anchor" href="#actors-appearance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Actors ratio</h4>
-      <img height="500" width="600" src="SocialGraphsPics/numberactors.png" alt="hi" class="inline"/>
-      <p> The ratio of the stars of movies is at least getting more positive in 2016. </p>
-<h3>
-<a id="genre-gender" class="anchor" href="#genre-gender" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The distribution of genres</h3>
-<p> Next, we'll look at which genres movies from both of the genders are likely to be. Let's consider that since women appear less often in every single aspect of the movies, we have multiplied the number of women accordingly, so the genders appear approximately as often.  </p>
-      <h4> <a id="directors-genre" class="anchor" href="#directors-genre" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Directors genres</h4>
-      <img height="500" width="600" src="SocialGraphsPics/directorsgenre.png" alt="hi" class="inline"/>
-      <p> We see that women are far more likely to direct dramas, biographies and comedies, but much less likely to take on the directing of action, adventure and horror. No women have directed any mysteries, sci-fis, thrillers, fantasies, music films and westerns in the years we look at. </p>
-      <h4> <a id="writers-genre" class="anchor" href="#writers-genres" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Writers genres</h4>
-      <img height="500" width="600" src="SocialGraphsPics/writersgenre.png" alt="hi" class="inline"/>
-      <p> We see the same pattern for writers. Females are more likely to write dramas and comedies, but less likely to write action movie scripts. No women had written music films.</p>
-      <h4> <a id="actors-genre" class="anchor" href="#actors-genres" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Actors genres</h4>
-      <img height="500" width="600" src="SocialGraphsPics/actorsgenre.png" alt="hi" class="inline"/>
-      <p> We see the same pattern as before, except for now, it's much more likely that a woman stars in a horror film than a man. No woman had starred in a western.</p>
-<h3>
-<a id="rating-gender" class="anchor" href="#rating-gender" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The distribution of ratings</h3>
-<p> Finally, in this graphs section, we'll look at which ratings movies from both of the genders are likely to receive. Again, the number of women is multiplied in accordance with the appearance of men.</p>
-      <h4> <a id="directors-ratings" class="anchor" href="#directors-ratings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Directors ratings</h4>
-      <img height="500" width="600" src="SocialGraphsPics/directorsratings.png" alt="hi" class="inline"/>
-      <p> Female directed films are more likely to receive a lower grade of 5.5-6.0 (and 8.0 by a small factor), but male directors generally receive higher grades (6.5-8.5). </p> 
-      <h4> <a id="writers-ratings" class="anchor" href="#writers-ratings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Writers ratings</h4>
-      <img height="500" width="600" src="SocialGraphsPics/writersratings.png" alt="hi" class="inline"/>
-      <p> The ratings are better distributed for the writers. </p>
-      <h4> <a id="actors-ratings" class="anchor" href="#actors-ratings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Actors ratings</h4>
-      <img height="500" width="600" src="SocialGraphsPics/actorsratings.png" alt="hi" class="inline"/>
-      <p> Male stars receive more of almost every grade, so the distribution must be pretty even, but the index of multiplication has been rounded in some uneven way. </p>
+<p>Now we will focus on constructing a directors network </p>
+      
     </section>
   </body>
 </html>
