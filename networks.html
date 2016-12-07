@@ -21,16 +21,17 @@
 
     <section class="main-content">
       <h2>
-<a id="tasks" class="anchor" href="#tasks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vinna með þetta template</h2>
-      <p> In this section, we'll look at some graphs concerning the project. We analyze the movies based on the gender of the director, writer and main star. We will look at the gender distribution in the movies based on various years, genre distribution between the genders and how the films are rated on IMDB.</p>
+<a id="tasks" class="anchor" href="#tasks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Network</h2>
+      <p> In this section we will extract information from The Open Movie Database to get all the information needed to construct networks
+      from movies released in the last 50 years</p>
 
 <h3>
-<a id="women-ratio" class="anchor" href="#women-ratio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The ratio of women in movies</h3>
+<a id="women-ratio" class="anchor" href="#women-ratio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Actors Network</h3>
 
-<p> First, we'll look at how many movies of the ones released in every year we look at are written by at least one woman, directed by at least one woman and have a female star. </p>
-      <img height="500" width="1200" src="SocialGraphsPics/percentfemales.png" alt="hi" class="inline"/>
-      <p> We see that the situation is the worst for women in the directing world. It has improved remarkably little over the span of the last 50 years, with a ratio only two times higher in the year 2016 than 1966, but still under 10%.
-      The writers statistics seem good, but we should consider the fact that the requirement that a movie has a female writer is only that one of the writers of the movie is female, and most movies have more than one and more than two writers. </p>
+<p> First, we'll construct a network of actors from movies released in recent 5 years. Each movie has listed 3-5 star actors that we will connect together in 
+  networkx multigraph, we will use multigraph since actors can act with each other not only once but multiple times. This is how the network for Actors in recent 5 years looks like: </p>
+      <img height="500" width="1200" src="SocialGraphsPics/Directors5.png" alt="hi" class="inline"/>
+      <p> Wquirement that a movie has a female writer is only that one of the writers of the movie is female, and most movies have more than one and more than two writers. </p>
 <h3>
 <a id="women-appearance" class="anchor" href="#women-appearance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The appearance of women in films</h3>
 <p> Now, let's look at graphs for each year; how the directors, writers and stars of movies are distributed based on gender. <p>
